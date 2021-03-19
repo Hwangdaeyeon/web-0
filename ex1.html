@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html
+>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  <!--
+    <input type="button" value="hi" onclick="alert('hi')">
+    <input type="text" onchange="alert('changed')">
+    <input type="text" onkeydown="alert('key down')">
+  -->
+  <h1>Object</h1>
+  <h2>Create</h2>
+    <script>
+      var coworker = {
+        "prgrammer":"egoing",
+        "designer":"leezche"
+      };
+      document.write("1"+coworker.programmer+"<br>");
+      document.write("2"+coworker.designer+"<br>");
+      coworker.bookkeeper = "duru";
+      document.write("3"+coworker.bookkeeper+"<br>");
+      coworker["data scientist"] = "taeho";
+      document.write("4"+coworker["data scientist"]+"<br>");
+    </script>
+    <h2>Iterate</h2>
+    <script>
+      for(var key in coworker) {
+        document.write(key+" : "+coworker[key]+"<br>");
+      }
+    </script>
+    <h2>Prperty & Method</h2>
+    <script>
+      coworker.showAll = function(){
+        for(var key in this) {
+          document.write(key+" : "+this[key]+"<br>");
+        }
+      }
+      coworker.showAll();
+    </script>
+
+  </body>
+</html>
